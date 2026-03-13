@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <script src="/scripts/index.js" type="module"></script>
+  </head>
+  <body class="body">
+    <section class="history">
+      <div class="history__wrapper">
+        <div class="history__body" id="history-body">
+          <h1 class="history__label _text-extra-title">Convert History</h1>
+          <ul class="history__list" id="history-list"></ul>
+          <button class="history__clear _text-extra-title" id="history-clear">
+            Clear
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="wrapper">
+      <section class="utilites">
+        <div class="utilites__wrapper">
+          <div class="utilites__body">
+            <button
+              class="utilites__history button _text-button"
+              id="history-button"
+            >
+              History
+            </button>
+            <button
+              class="utilites__thema button _text-button"
+              id="utilites-thema-button"
+            >
+              Dark Theme
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="converter">
+        <div class="converter__wrapper">
+          <div class="converter__body">
+            <div class="converter_title">
+              <h1 class="converter__name _text-extra-title">
+                Currency Converter
+              </h1>
+              <h2 class="converter__description _text-extra-subtitle">
+                Enter amount and select currencies
+              </h2>
+            </div>
+            <form id="form" class="converter__form form">
+              <ul class="form__list">
+                <li class="form__item">
+                  <h3 class="form__label _text-title">From:</h3>
+                  <select
+                    class="form__select _text-subtitle"
+                    name="first-currancy"
+                    id="first-currancy"
+                  ></select>
+                </li>
+                <li class="form__item">
+                  <h3 class="form__label _text-title">To:</h3>
+                  <select
+                    class="form__select _text-subtitle"
+                    name="second-currancy"
+                    id="second-currancy"
+                  ></select>
+                </li>
+                <li class="form__item">
+                  <h3 class="form__label _text-title">Amount:</h3>
+                  <input
+                    type="number"
+                    class="form__input _text-subtitle"
+                    id="amount-input"
+                    min="1"
+                    value="1"
+                    placeholder="Enter amount"
+                  />
+                </li>
+              </ul>
+              <button
+                type="submit"
+                class="form__button button _text-button"
+                data-click="pairs"
+              >
+                Convert
+              </button>
+            </form>
+          </div>
+          <div class="converter__results">
+            <h3 class="converter__converted _text-title" id="result-amount">
+              Converted:
+            </h3>
+            <h3 class="converter__rate _text-title" id="result-rate">Rate:</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

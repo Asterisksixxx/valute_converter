@@ -1,0 +1,68 @@
+.converter {
+}
+.converter__wrapper {
+}
+.converter__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 30px;
+  border-radius: 15px;
+  background-color: var(--first-color);
+}
+.converter_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 5px;
+}
+.converter__name {
+}
+.converter__description {
+}
+.converter__form {
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+}
+.form__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+}
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form__label {
+}
+.form__select {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid var(--border-inputs);
+}
+.form__input {
+  width: 100%;
+  padding: 12px 10px;
+}
+.form__button {
+}
+
+.converter__results {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+}
+.converter__converted {
+}
+.converter__rate {
+}
