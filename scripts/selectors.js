@@ -9,3 +9,4 @@ export const $historyList = document.getElementById(`history-list`);
 export const $historyButton = document.getElementById(`history-button`);
 export const $historyClearButton = document.getElementById(`history-clear`);
 export const $themeButton = document.getElementById(`utilites-thema-button`);
+export const $document = document.documentElement;

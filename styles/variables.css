@@ -1,14 +1,20 @@
 :root {
-  --background-color: #f5f8ff;
-  --first-color: #ffffff;
-  --secondary-color: #2962ff;
-  --border-inputs: #dddddd;
-  --button-shadow: #6a89df;
-  --text-extra-title: #2962ff;
-  --text-extra-subtitle: #666666;
-  --text-title: #555555;
-  --text-subtitle: #333333;
-  --text-button: #ffffff;
+  color-scheme: light dark;
+
+  --background-color: light-dark(#f5f8ff, #1b1b24);
+  --first-color: light-dark(#ffffff, #2b242f);
+  --secondary-color: light-dark(#2962ff, #3b5461);
+  --border-inputs: light-dark(#dddddd, #2d2041);
+  --button-shadow: light-dark(#6a89df, #1d2035);
+  --text-extra-title: light-dark(#2962ff, #6466fb);
+  --text-extra-subtitle: light-dark(#666666, #7eaac1);
+  --text-title: light-dark(#555555, #576caa);
+  --text-subtitle: light-dark(#333333, #aadee7);
+  --text-button: light-dark(#ffffff, #9fcedb);
 }
-:root .dark-thema {
+[data-theme="light"] {
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
 }

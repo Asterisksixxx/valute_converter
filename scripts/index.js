@@ -1,53 +1,66 @@
-//Продумать создание history item через localStorage и через форму, хочу 1 функцию на создание .DONE
-//Переключение тем
-//TODO разделить зависимости js файлов .DONE(Спросить у Кирилла, выглядит как дрочня)
-//Пересмотреть все названия функций
-//Исправить шрифты, добавить анимации
-export const currencyState = {
-  list: null,
-};
-
 import {
   $selectInput,
   $selectInput2,
   $form,
-  $amount,
-  $resultAmount,
-  $resultRate,
+  $document,
+  $themeButton,
 } from "./selectors.js";
-
-import {
-  loadHistoryList,
-  createHistoryItem,
-  createHistoryItemFromStorage,
-} from "./history.js";
 
 import { getAllCurrency, getConvert } from "./converter.js";
 
-const appendSelectList = () => {
-  currencyState.list.forEach(([code, name], index) => {
-    $selectInput.insertAdjacentHTML(
-      "beforeend",
-      `<option value="${index}">${code} - ${name}</option>`,
-    );
-    $selectInput2.insertAdjacentHTML(
-      "beforeend",
-      `<option value="${index}">${code} - ${name}</option>`,
-    );
-  });
+import { createHistoryItem } from "./history.js";
+
+const appendSelectListOption = (option) => {
+  const [code, name] = option;
+
+  $selectInput.insertAdjacentHTML(
+    "beforeend",
+    `<option>${code} - ${name}</option>`,
+  );
+  $selectInput2.insertAdjacentHTML(
+    "beforeend",
+    `<option>${code} - ${name}</option>`,
+  );
+};
+const initSelectList = async () => {
+  const currencyList = await getAllCurrency();
+  currencyList.forEach(appendSelectListOption);
+};
+
+const handleThemeButton = () => {
+  const currentThema = $document.dataset.theme;
+  $document.setAttribute(
+    "data-theme",
+    currentThema === "light" ? "dark" : "light",
+  );
+  localStorage.setItem("Thema", $document.dataset.theme);
+};
+
+const initColorTheme = () => {
+  const savedTheme = localStorage.getItem("Thema");
+  $document.setAttribute("data-theme", savedTheme);
 };
 
 const start = () => {
-  getAllCurrency();
-  loadHistoryList();
-  createHistoryItemFromStorage();
+  initSelectList();
+  createHistoryItem();
+  initColorTheme();
 };
-
+$themeButton.addEventListener("click", handleThemeButton);
 $form.addEventListener("submit", (event) => {
   event.preventDefault();
-  getConvert();
+  console.log(
+    event,
+    event.srcElement[0].value,
+    event.srcElement[1].value,
+    event.srcElement[2].value,
+  );
+
+  getConvert(
+    event.srcElement[0].value,
+    event.srcElement[1].value,
+    event.srcElement[2].value,
+  );
 });
 
 document.addEventListener("DOMContentLoaded", start);
-
-export { appendSelectList };
