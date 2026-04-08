@@ -19,10 +19,4 @@ const getPairCurrency = (currencyFrom, currencyTo) => {
   return request(`pair/${fromCode}/${toCode}`);
 };
 
-// const convertAmount = async (currencyFrom, currencyTo, amount) => {
-//   const response = await getPairCurrency(currencyFrom, currencyTo);
-
-//   return amount * response.conversion_rate;
-// };
-
 export { getCurrencyList, getPairCurrency };

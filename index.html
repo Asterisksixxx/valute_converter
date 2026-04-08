@@ -9,17 +9,6 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="history">
-        <div class="history__wrapper">
-          <div class="history__body" id="history-body">
-            <h1 class="history__label _text-extra-title">Convert History</h1>
-            <ul class="history__list" id="history-list"></ul>
-            <button class="history__clear _text-extra-title" id="history-clear">
-              Clear
-            </button>
-          </div>
-        </div>
-      </section>
       <section class="utilites">
         <div class="utilites__wrapper">
           <div class="utilites__body">
@@ -34,6 +23,17 @@
               id="utilites-theme-button"
             >
               Switch Theme
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="history">
+        <div class="history__wrapper">
+          <div class="history__body" id="history-body">
+            <h1 class="history__label _text-extra-title">Convert History</h1>
+            <ul class="history__list" id="history-list"></ul>
+            <button class="history__clear _text-extra-title" id="history-clear">
+              Clear
             </button>
           </div>
         </div>
@@ -70,11 +70,12 @@
                 <li class="form__item">
                   <h3 class="form__label _text-title">Amount:</h3>
                   <input
-                    type="number"
                     class="form__input _text-subtitle"
+                    type="number"
                     id="amount-input"
                     min="1"
                     value="1"
+                    required
                     placeholder="Enter amount"
                   />
                 </li>

@@ -1,9 +1,9 @@
 * {
-  /* transition:
+  transition:
     background-color 0.5s ease,
     color 0.5s ease,
     border-color 0.5s ease,
-    box-shadow 0.5s ease; */
+    box-shadow 0.5s ease;
 }
 
 .wrapper {
@@ -12,9 +12,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 4px;
   align-items: center;
   justify-content: center;
   background-color: var(--background-color);
+  overflow: hidden;
 }
 .form__select:focus,
 .form__input:focus {

@@ -1,8 +1,28 @@
 .utilites__body {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 10px;
   position: absolute;
   right: 15px;
   top: 15px;
+  transition: all 1s ease;
+}
+.utilites__wrapper {
+}
+.utilites__body {
+}
+@media (max-width: 780px) {
+  .utilites__wrapper {
+    width: 100vw;
+  }
+  .utilites__body {
+    width: 100vw;
+  }
+  .utilites__body {
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    right: auto;
+    top: 10px;
+  }
 }

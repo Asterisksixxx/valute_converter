@@ -15,14 +15,14 @@ const appendHistoryList = ({
   amount,
   currencyFrom,
   currencyTo,
-  convertResult,
+  convertAmount,
   convertRate,
 }) => {
   $historyList.insertAdjacentHTML(
     "beforeend",
     `<li class="history__item">
               <h2 class="history__text _text-extra-subtitle">
-              ${amount} ${currencyFrom} &#x27A4 ${currencyTo}. Result: ${Number(convertResult).toFixed(2)}. Rate: ${Number(convertRate).toFixed(2)}
+              ${amount} ${currencyFrom} &#x27A4 ${currencyTo}. Result: ${Number(convertAmount).toFixed(2)}. Rate: ${Number(convertRate).toFixed(2)}
               </h2>
             </li>`,
   );
@@ -30,16 +30,13 @@ const appendHistoryList = ({
 
 const initHistory = () => {
   const historyList = getHistory();
-  console.log(typeof historyList, historyList);
   historyList?.forEach((item) => appendHistoryList(item));
 };
 
 const saveHistoryList = (convertItem) => {
   const data = getStorageValue(STORAGE_KEYS.HISTORY);
-  console.log(data);
   const updatedList = [...data, convertItem];
   setStorageValue(STORAGE_KEYS.HISTORY, updatedList);
-  console.log(updatedList);
 };
 
 const getHistory = () => {
