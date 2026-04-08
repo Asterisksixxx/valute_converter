@@ -1,6 +1,5 @@
-//todo getConvert(param param) DONE
 import { $resultAmount, $resultRate } from "./selectors.js";
-import { getPairCurrency, getCurrencyList } from "./response.js";
+import { getPairCurrency, getCurrencyList } from "./api.js";
 import { appendHistoryList, saveHistoryList } from "./history.js";
 
 const getAllCurrency = async () => {
@@ -8,6 +7,7 @@ const getAllCurrency = async () => {
   return Array.from(currency.supported_codes);
 };
 
+// move to form.js
 const getConvert = async (currencyFrom, currencyTo, amount) => {
   const response = await getPairCurrency(currencyFrom, currencyTo);
   const convertResult = amount * response.conversion_rate;
@@ -22,6 +22,7 @@ const getConvert = async (currencyFrom, currencyTo, amount) => {
     convertRate: response.conversion_rate,
     amount: amount,
   };
+
   saveHistoryList(convertItem);
   appendHistoryList(convertItem);
 };

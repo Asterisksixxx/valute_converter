@@ -3,11 +3,10 @@
   left: 0%;
   top: 0%;
 }
-
+/* для малых устройств перенос истории вниз и сдвиг конвертера вверх */
 .history__body {
   height: 100vh;
-  min-height: 200px;
-  max-width: 350px;
+
   padding: 5px 0 5px 0;
   background-color: var(--first-color);
   transition: transform 1s ease;

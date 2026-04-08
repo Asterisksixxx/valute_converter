@@ -4,6 +4,12 @@ import {
   $historyButton,
   $historyClearButton,
 } from "./selectors.js";
+import {
+  deleteStorageValue,
+  getStorageValue,
+  setStorageValue,
+  STORAGE_KEYS,
+} from "./storage.js";
 
 const appendHistoryList = ({
   amount,
@@ -21,34 +27,39 @@ const appendHistoryList = ({
             </li>`,
   );
 };
-const createHistoryItem = () => {
-  const historyList = fetchHistory();
+
+const initHistory = () => {
+  const historyList = getHistory();
+  console.log(typeof historyList, historyList);
   historyList?.forEach((item) => appendHistoryList(item));
 };
 
 const saveHistoryList = (convertItem) => {
-  const data = localStorage.getItem("Converted");
-  const historyList = data ? JSON.parse(data) : [];
-  const updatedList = [...historyList, convertItem];
-  localStorage.setItem("Converted", JSON.stringify(updatedList));
+  const data = getStorageValue(STORAGE_KEYS.HISTORY);
+  console.log(data);
+  const updatedList = [...data, convertItem];
+  setStorageValue(STORAGE_KEYS.HISTORY, updatedList);
   console.log(updatedList);
 };
 
-const fetchHistory = () => {
-  const historyList = JSON.parse(localStorage.getItem("Converted")) ?? null;
-  return historyList;
+const getHistory = () => {
+  return getStorageValue(STORAGE_KEYS.HISTORY);
 };
 
 const clearHistory = () => {
   Array.from($historyList.children).forEach((child) => child.remove());
-  localStorage.removeItem("Converted");
+  deleteStorageValue(STORAGE_KEYS.HISTORY);
 };
 
 const toggleHistory = () => {
   $historyBody.classList.toggle(`history__body_open`);
 };
 
-$historyButton.addEventListener("click", toggleHistory);
-$historyClearButton.addEventListener("click", clearHistory);
-
-export { fetchHistory, appendHistoryList, createHistoryItem, saveHistoryList };
+export {
+  getHistory,
+  appendHistoryList,
+  initHistory,
+  saveHistoryList,
+  clearHistory,
+  toggleHistory,
+};

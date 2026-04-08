@@ -1,12 +1,12 @@
-export const $selectInput = document.getElementById(`first-currancy`);
-export const $selectInput2 = document.getElementById(`second-currancy`);
+export const $selectFrom = document.getElementById(`from-currency`);
+export const $selectTo = document.getElementById(`to-currency`);
 export const $form = document.getElementById(`form`);
-export const $amount = document.getElementById(`amount-input`);
+export const $inputAmount = document.getElementById(`amount-input`);
 export const $resultAmount = document.getElementById(`result-amount`);
 export const $resultRate = document.getElementById(`result-rate`);
 export const $historyBody = document.getElementById(`history-body`);
 export const $historyList = document.getElementById(`history-list`);
 export const $historyButton = document.getElementById(`history-button`);
 export const $historyClearButton = document.getElementById(`history-clear`);
-export const $themeButton = document.getElementById(`utilites-thema-button`);
+export const $themeButton = document.getElementById(`utilites-theme-button`);
 export const $document = document.documentElement;

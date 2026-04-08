@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="/styles/index.css" />
     <script src="/scripts/index.js" type="module"></script>
   </head>
-  <body class="body">
-    <section class="history">
-      <div class="history__wrapper">
-        <div class="history__body" id="history-body">
-          <h1 class="history__label _text-extra-title">Convert History</h1>
-          <ul class="history__list" id="history-list"></ul>
-          <button class="history__clear _text-extra-title" id="history-clear">
-            Clear
-          </button>
-        </div>
-      </div>
-    </section>
+  <body>
     <div class="wrapper">
+      <section class="history">
+        <div class="history__wrapper">
+          <div class="history__body" id="history-body">
+            <h1 class="history__label _text-extra-title">Convert History</h1>
+            <ul class="history__list" id="history-list"></ul>
+            <button class="history__clear _text-extra-title" id="history-clear">
+              Clear
+            </button>
+          </div>
+        </div>
+      </section>
       <section class="utilites">
         <div class="utilites__wrapper">
           <div class="utilites__body">
@@ -30,8 +30,8 @@
               History
             </button>
             <button
-              class="utilites__thema button _text-button"
-              id="utilites-thema-button"
+              class="utilites__theme button _text-button"
+              id="utilites-theme-button"
             >
               Switch Theme
             </button>
@@ -41,8 +41,8 @@
       <section class="converter">
         <div class="converter__wrapper">
           <div class="converter__body">
-            <div class="converter_title">
-              <h1 class="converter__name _text-extra-title">
+            <div class="converter__header">
+              <h1 class="converter__title _text-extra-title">
                 Currency Converter
               </h1>
               <h2 class="converter__description _text-extra-subtitle">
@@ -55,16 +55,16 @@
                   <h3 class="form__label _text-title">From:</h3>
                   <select
                     class="form__select _text-subtitle"
-                    name="first-currancy"
-                    id="first-currancy"
+                    name="from-currency"
+                    id="from-currency"
                   ></select>
                 </li>
                 <li class="form__item">
                   <h3 class="form__label _text-title">To:</h3>
                   <select
                     class="form__select _text-subtitle"
-                    name="second-currancy"
-                    id="second-currancy"
+                    name="to-currency"
+                    id="to-currency"
                   ></select>
                 </li>
                 <li class="form__item">

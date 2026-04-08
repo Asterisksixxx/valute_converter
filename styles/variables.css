@@ -12,9 +12,11 @@
   --text-subtitle: light-dark(#333333, #aadee7);
   --text-button: light-dark(#ffffff, #9fcedb);
 }
+
 [data-theme="light"] {
   color-scheme: light;
 }
+
 [data-theme="dark"] {
   color-scheme: dark;
 }
