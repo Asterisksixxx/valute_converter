@@ -1,11 +1,10 @@
-import { getAllCurrency } from "./converter.js";
 import {
   $selectFrom,
   $selectTo,
   $resultAmount,
   $resultRate,
 } from "./selectors.js";
-import { getPairCurrency } from "./api.js";
+import { getPairCurrency, getCurrencyList } from "./api.js";
 import { saveHistoryList, appendHistoryList } from "./history.js";
 
 const appendSelectListOption = (option) => {
@@ -20,18 +19,19 @@ const appendSelectListOption = (option) => {
     `<option>${code} - ${name}</option>`,
   );
 };
+
 const initForm = async () => {
-  const currencyList = await getAllCurrency();
+  const currencyList = await getCurrencyList();
   currencyList.forEach(appendSelectListOption);
 };
 
-const handleFormSubmit = async (currencyFrom, currencyTo, amount) => {
+const submitForm = async (currencyFrom, currencyTo, amount) => {
   const convertResult = await getConvertResult(
     currencyFrom,
     currencyTo,
     amount,
   );
-  console.log(convertResult);
+
   saveHistoryList(convertResult);
   appendHistoryList(convertResult);
 
@@ -41,11 +41,13 @@ const handleFormSubmit = async (currencyFrom, currencyTo, amount) => {
 
 const getRate = async (currencyFrom, currencyTo) => {
   const request = await getPairCurrency(currencyFrom, currencyTo);
+
   return request.conversion_rate;
 };
 
 const getConvertResult = async (currencyFrom, currencyTo, amount) => {
   const rate = await getRate(currencyFrom, currencyTo);
+
   console.log("rate: ", rate);
 
   const convertItem = {
@@ -59,4 +61,4 @@ const getConvertResult = async (currencyFrom, currencyTo, amount) => {
   return convertItem;
 };
 
-export { initForm, handleFormSubmit };
+export { initForm, submitForm };

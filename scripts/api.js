@@ -8,8 +8,9 @@ const request = async (path) => {
   return responseJson;
 };
 
-const getCurrencyList = () => {
-  return request("codes");
+const getCurrencyList = async () => {
+  const response = await request("codes");
+  return response.supported_codes;
 };
 
 const getPairCurrency = (currencyFrom, currencyTo) => {

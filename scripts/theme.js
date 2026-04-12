@@ -18,4 +18,5 @@ const initTheme = () => {
     getStorageValue(STORAGE_KEYS.ACTIVE_THEME, "system"),
   );
 };
+
 export { toggleTheme, initTheme };

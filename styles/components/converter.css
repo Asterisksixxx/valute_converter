@@ -41,6 +41,13 @@
   gap: 12px;
 }
 
+/* .form__swap {
+  padding: 12px 10px;
+}
+.form__swap svg {
+  transform: rotate(90deg);
+} */
+
 .form__select {
   width: 100%;
   padding: 12px 10px;
@@ -72,7 +79,6 @@
 @media (max-height: 840px) {
   .converter__body {
     gap: 4px;
-    padding: 4px 4px;
     border-radius: 15px;
     background-color: var(--first-color);
   }

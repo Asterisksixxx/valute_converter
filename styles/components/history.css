@@ -7,7 +7,7 @@
 /* для малых устройств перенос истории вниз и сдвиг конвертера вверх */
 .history__body {
   height: 100vh;
-  max-width: 500px;
+  width: clamp(20vw, 28vw, 36vw);
   padding: 5px 0 5px 0;
   background-color: var(--first-color);
   transition: transform 1s ease;
@@ -63,7 +63,7 @@
   }
 
   .history__body {
-    height: 30vh;
+    height: max(200px, 20vw);
     min-width: 100vw;
     transform: translateY(100%);
   }

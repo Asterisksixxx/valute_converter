@@ -16,13 +16,19 @@
               class="utilites__history button _text-button"
               id="history-button"
             >
-              History
+              <h3>History</h3>
+              <svg width="16" height="16">
+                <use href="assets/sprite.svg#utilites-history"></use>
+              </svg>
             </button>
             <button
               class="utilites__theme button _text-button"
               id="utilites-theme-button"
             >
-              Switch Theme
+              <h3>Switch Theme</h3>
+              <svg width="16" height="16">
+                <use href="assets/sprite.svg#utilites-theme"></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -51,6 +57,7 @@
             </div>
             <form id="form" class="converter__form form">
               <ul class="form__list">
+                <!-- Можно убрать лист, добавить кнопки +10, +100 в сумму -->
                 <li class="form__item">
                   <h3 class="form__label _text-title">From:</h3>
                   <select
@@ -67,6 +74,17 @@
                     id="to-currency"
                   ></select>
                 </li>
+                <!-- <li class="form__item form__swap">
+                  <button
+                    type="button"
+                    class="form__button _text-subtitle"
+                    id="form-swap"
+                  >
+                    <svg width="16" height="16">
+                      <use href="assets/sprite.svg#form-swap"></use>
+                    </svg>
+                  </button>
+                </li> -->
                 <li class="form__item">
                   <h3 class="form__label _text-title">Amount:</h3>
                   <input

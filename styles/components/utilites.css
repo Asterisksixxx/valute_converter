@@ -7,17 +7,16 @@
   top: 15px;
   transition: all 1s ease;
 }
-.utilites__wrapper {
-}
-.utilites__body {
-}
+
 @media (max-width: 780px) {
   .utilites__wrapper {
     width: 100vw;
   }
+
   .utilites__body {
     width: 100vw;
   }
+
   .utilites__body {
     width: 100vw;
     flex-direction: row;

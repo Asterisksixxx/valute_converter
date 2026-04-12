@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" >
+    <symbol id="utilites-history"  viewBox="0 0 24 24">
+        <g fill="none"><path d="M11 14a6 6 0 1 0 12 0a6 6 0 0 0-12 0"/>
+        <path stroke="currentColor" stroke-linecap="square" stroke-width="2" d="M1 4h22M1 9h6m-6 5h6m-6 5h6m10-6.664V14l1.333 1.333M17 20a6 6 0 1 1 0-12a6 6 0 0 1 0 12Z"/></g> 
+    </symbol>
+
+    <symbol id="utilites-theme" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9.525.626L21.9 13L12 22.9L2.1 13l8.486-8.485L8.11 2.04zM5.93 12h12.142l-6.07-6.07zm14.82 5.39l1.315 1.66c.581.733.581 1.847 0 2.58a1.68 1.68 0 0 1-1.314.657c-.53 0-1-.26-1.314-.657c-.581-.733-.581-1.847 0-2.58z"/>
+     </symbol>
+
+     <symbol id="form-swap" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-linecap="square" stroke-width="2" d="M21 14.5H4l5 5m-6-10h17l-5-5"/>
+     </symbol>
+     
+</svg>
+
+

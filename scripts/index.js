@@ -7,7 +7,7 @@ import {
 
 import { initHistory, toggleHistory, clearHistory } from "./history.js";
 import { initTheme, toggleTheme } from "./theme.js";
-import { initForm, handleFormSubmit } from "./form.js";
+import { initForm, submitForm } from "./form.js";
 
 const start = () => {
   initForm();
@@ -21,7 +21,7 @@ $form.addEventListener("submit", (event) => {
   event.preventDefault();
   const form = document.forms[0];
 
-  handleFormSubmit(
+  submitForm(
     form.elements["from-currency"].value,
     form.elements["to-currency"].value,
     form.elements["amount-input"].value,

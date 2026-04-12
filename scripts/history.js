@@ -30,21 +30,25 @@ const appendHistoryList = ({
 
 const initHistory = () => {
   const historyList = getHistory();
-  historyList?.forEach((item) => appendHistoryList(item));
+
+  historyList.forEach((item) => appendHistoryList(item));
 };
 
 const saveHistoryList = (convertItem) => {
-  const data = getStorageValue(STORAGE_KEYS.HISTORY);
+  const data = getHistory();
+
   const updatedList = [...data, convertItem];
+
   setStorageValue(STORAGE_KEYS.HISTORY, updatedList);
 };
 
 const getHistory = () => {
-  return getStorageValue(STORAGE_KEYS.HISTORY);
+  return getStorageValue(STORAGE_KEYS.HISTORY, []);
 };
 
 const clearHistory = () => {
   Array.from($historyList.children).forEach((child) => child.remove());
+
   deleteStorageValue(STORAGE_KEYS.HISTORY);
 };
 
