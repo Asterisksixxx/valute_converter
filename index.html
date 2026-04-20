@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Converter</title>
     <link rel="stylesheet" href="/styles/index.css" />
     <script src="/scripts/index.js" type="module"></script>
   </head>
@@ -13,19 +13,17 @@
         <div class="utilites__wrapper">
           <div class="utilites__body">
             <button
-              class="utilites__history button _text-button"
+              class="utilites__history button _touchable-button-click _text-button"
               id="history-button"
             >
-              <h3>History</h3>
               <svg width="16" height="16">
                 <use href="assets/sprite.svg#utilites-history"></use>
               </svg>
             </button>
             <button
-              class="utilites__theme button _text-button"
+              class="utilites__theme button _touchable-button-click _text-button"
               id="utilites-theme-button"
             >
-              <h3>Switch Theme</h3>
               <svg width="16" height="16">
                 <use href="assets/sprite.svg#utilites-theme"></use>
               </svg>
@@ -38,7 +36,10 @@
           <div class="history__body" id="history-body">
             <h1 class="history__label _text-extra-title">Convert History</h1>
             <ul class="history__list" id="history-list"></ul>
-            <button class="history__clear _text-extra-title" id="history-clear">
+            <button
+              class="history__clear button _touchable-button-click _text-extra-title"
+              id="history-clear"
+            >
               Clear
             </button>
           </div>
@@ -48,16 +49,10 @@
         <div class="converter__wrapper">
           <div class="converter__body">
             <div class="converter__header">
-              <h1 class="converter__title _text-extra-title">
-                Currency Converter
-              </h1>
-              <h2 class="converter__description _text-extra-subtitle">
-                Enter amount and select currencies
-              </h2>
+              <h1 class="converter__title _text-extra-title">Converter</h1>
             </div>
             <form id="form" class="converter__form form">
               <ul class="form__list">
-                <!-- Можно убрать лист, добавить кнопки +10, +100 в сумму -->
                 <li class="form__item">
                   <h3 class="form__label _text-title">From:</h3>
                   <select
@@ -74,17 +69,7 @@
                     id="to-currency"
                   ></select>
                 </li>
-                <!-- <li class="form__item form__swap">
-                  <button
-                    type="button"
-                    class="form__button _text-subtitle"
-                    id="form-swap"
-                  >
-                    <svg width="16" height="16">
-                      <use href="assets/sprite.svg#form-swap"></use>
-                    </svg>
-                  </button>
-                </li> -->
+
                 <li class="form__item">
                   <h3 class="form__label _text-title">Amount:</h3>
                   <input

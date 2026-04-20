@@ -1,16 +1,16 @@
 :root {
   color-scheme: light dark;
 
-  --background-color: light-dark(#f5f8ff, #1b1b24);
-  --first-color: light-dark(#ffffff, #2b242f);
-  --secondary-color: light-dark(#2962ff, #3b5461);
-  --border-inputs: light-dark(#dddddd, #2d2041);
-  --button-shadow: light-dark(#6a89df, #1d2035);
-  --text-extra-title: light-dark(#2962ff, #6466fb);
-  --text-extra-subtitle: light-dark(#666666, #7eaac1);
-  --text-title: light-dark(#555555, #576caa);
-  --text-subtitle: light-dark(#333333, #aadee7);
-  --text-button: light-dark(#ffffff, #9fcedb);
+  --background-color: light-dark(hsl(210, 17%, 98%), hsl(240, 22%, 15%));
+  --first-color: light-dark(hsl(0, 0%, 100%), hsl(240, 16%, 20%));
+  --secondary-color: light-dark(hsl(240, 22%, 15%), hsl(240, 12%, 95%));
+  --border-inputs: light-dark(hsl(220, 13%, 91%), hsl(240, 14%, 26%));
+  --text-extra-title: light-dark(hsl(240, 22%, 15%), hsl(240, 12%, 95%));
+  --text-title: light-dark(hsl(220, 9%, 46%), hsl(218, 11%, 65%));
+  --text-subtitle: light-dark(hsl(240, 22%, 15%), hsl(240, 12%, 95%));
+  --bg-button: light-dark(hsl(240, 22%, 15%), hsl(240, 12%, 95%));
+  --text-button: light-dark(hsl(0, 0%, 100%), hsl(240, 16%, 20%));
+  --border-button: light-dark(hsl(0, 0%, 87%), hsl(240, 16%, 20%));
 }
 
 [data-theme="light"] {

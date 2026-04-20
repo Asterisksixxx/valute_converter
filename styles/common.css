@@ -15,45 +15,39 @@
   box-shadow: 0 0 0 2px var(--background-color);
   outline: none;
 }
-.button:focus {
-  box-shadow: 0px 5px 22px 5px var(--button-shadow);
+
+.button {
+  padding: 1.2rem;
+  border-radius: 10px;
+}
+
+.button:focus:not(:focus-visible) {
   outline: none;
 }
 
-.button {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 4px;
-  background-color: var(--secondary-color);
-  color: var(--first-color);
-  padding: 10px 12px;
-  border-radius: 10px;
-  transition: box-shadow 0.3s ease;
-}
-
+/* text */
 ._text-extra-title {
-  font-family: Poppins Bold;
-  font-size: 26px;
+  font-family: GoogleSans-Bold;
+  font-size: clamp(1.6rem, 2vw, 2.6rem);
   font-weight: 800;
   color: var(--text-extra-title);
 }
 ._text-extra-subtitle {
-  font-family: Poppins Bold;
+  font-family: GoogleSans-Regular;
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-extra-subtitle);
+  color: var(--text-extra-title);
 }
 ._text-title {
-  font-family: Poppins Regular;
+  font-family: GoogleSans-Regular;
   font-size: 14px;
   font-weight: 600;
   color: var(--text-title);
 }
 
 ._text-subtitle {
-  font-family: Poppins Regular;
-  font-size: 14px;
+  font-family: GoogleSans-Regular;
+  font-size: clamp(1.4rem, 16px, 1.8rem);
   font-weight: 600;
   color: var(--text-subtitle);
 }

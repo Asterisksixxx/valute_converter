@@ -1,4 +1,8 @@
-._touchable-click {
+._touchable-button-click {
 }
-._touchable-active {
+._touchable-button-click:hover {
+  transform: scale(1.1);
+}
+._touchable-button-click:active {
+  transform: scale(0.9);
 }
